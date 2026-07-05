@@ -1,83 +1,41 @@
-# ==========================================================
-# Environment Variables & Secrets
-# ==========================================================
+# Environment
 .env
 .env.*
-!.env.example
 
-# ==========================================================
 # Python
-# ==========================================================
+venv/
+.venv/
+**/.venv/
 __pycache__/
 *.py[cod]
 *$py.class
-*.pyo
 
-venv/
-env/
-.venv/
-
-# ==========================================================
 # Airflow
-# ==========================================================
 logs/
-airflow.cfg
 airflow.db
+airflow.cfg
 airflow-webserver.pid
 airflow-webserver.err
 airflow-webserver.out
 
-# Airflow generated files
-standalone_admin_password.txt
+# Generated Data
+data/output/
+data/failed/
 
-# ==========================================================
-# Data
-# ==========================================================
-data/input/*
-data/output/*
-data/failed/*
+# Ignore generated chunks
+data/output/*.csv
+data/failed/*.csv
 
-# Keep folder structure
-!data/input/.gitkeep
-!data/output/.gitkeep
-!data/failed/.gitkeep
+# Keep sample input
+!data/input/
+!data/input/vehicle_data.csv
 
-# Ignore generated reports
-*.xlsx
-
-# ==========================================================
-# Docker
-# ==========================================================
-*.log
-
-# ==========================================================
 # IDE
-# ==========================================================
 .vscode/
 .idea/
-
-# ==========================================================
-# OS
-# ==========================================================
-.DS_Store
-Thumbs.db
-
-# ==========================================================
-# Testing
-# ==========================================================
-.pytest_cache/
-.coverage
-htmlcov/
-
-# ==========================================================
-# Build
-# ==========================================================
-dist/
-build/
-*.egg-info/
-
-# ==========================================================
-# Misc
-# ==========================================================
 *.swp
 *.swo
+
+# OS
+.DS_Store
+Thumbs.db
