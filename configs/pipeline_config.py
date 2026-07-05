@@ -21,7 +21,7 @@ DEFAULT_INPUT_FILE = INPUT_FOLDER / "vehicle_data.csv"
 # S3 Configuration
 S3_BUCKET = Variable.get(
     "S3_BUCKET",
-    default_var="vehicle-batch-airflow"
+    default="vehicle-batch-airflow"
 )
 S3_INPUT_KEY = "input/vehicle_data.csv"
 S3_OUTPUT_KEY = "output/final_vehicle_report.csv"
