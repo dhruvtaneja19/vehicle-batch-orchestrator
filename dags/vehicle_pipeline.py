@@ -59,7 +59,7 @@ def vehicle_pipeline():
         chunk_size = int(
             Variable.get(
                 "CHUNK_SIZE",
-                default_var=DEFAULT_CHUNK_SIZE
+                default=DEFAULT_CHUNK_SIZE
             )
         )
 
