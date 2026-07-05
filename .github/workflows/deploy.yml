@@ -32,18 +32,18 @@ jobs:
 
           cd ~/vehicle-batch-orchestrator
 
-
-          git fetch origin
-
-
-          git reset --hard origin/main
-
-          git clean -fd
-
-          echo "===== Restarting Containers ====="
-
+          echo "===== Stopping Containers ====="
           docker compose down
 
+          echo "===== Fixing Permissions ====="
+          sudo chown -R ubuntu:ubuntu ~/vehicle-batch-orchestrator
+
+          echo "===== Updating Code ====="
+          git fetch origin
+          git reset --hard origin/main
+          git clean -fd
+
+          echo "===== Starting Containers ====="
           docker compose up -d --build
 
           echo "===== Waiting for Services ====="
