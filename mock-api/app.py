@@ -7,7 +7,7 @@ from routers.valuation import router as valuation_router
 
 app = FastAPI(title="Vehicle Mock APIs")
 
-app.include_router(rc_router, prefix="/api")
-app.include_router(fastag_router, prefix="/api")
-app.include_router(vrn_router, prefix="/api")
-app.include_router(valuation_router, prefix="/api")
+app.include_router(rc_router)
+app.include_router(fastag_router)
+app.include_router(vrn_router)
+app.include_router(valuation_router)
